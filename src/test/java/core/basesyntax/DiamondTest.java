@@ -40,17 +40,17 @@ public class DiamondTest {
     public void shouldPrintEvenStarDiamondCorrectly() {
         StringStream actualPrintStream = new StringStream();
         Diamond.drawDiamond(4, actualPrintStream);
-        trimStar(actualPrintStream, EVEN_NUMBER_OF_STAR, 4);
+        assertTrimmedDiamondsEqual(actualPrintStream, EVEN_NUMBER_OF_STAR, 4);
     }
 
     @Test
     public void shouldPrintOddStarDiamondCorrectly() {
         StringStream actualPrintStream = new StringStream();
         Diamond.drawDiamond(5, actualPrintStream);
-        trimStar(actualPrintStream, ODD_NUMBER_OF_STAR, 5);
+        assertTrimmedDiamondsEqual(actualPrintStream, ODD_NUMBER_OF_STAR, 5);
     }
 
-    private void trimStar(StringStream actualPrintStream, String expected, int maxSize) {
+    private void assertTrimmedDiamondsEqual(StringStream actualPrintStream, String expected, int maxSize) {
         String[] actualResult = actualPrintStream.getPrintString().split("\n");
         String[] expectedResult = expected.split("\n");
         for (int i = 0; i < actualResult.length; i++) {
