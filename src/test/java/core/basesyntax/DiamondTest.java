@@ -3,8 +3,6 @@ package core.basesyntax;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.io.FileNotFoundException;
-
 public class DiamondTest {
     private static final String ONE_STAR = "*";
 
@@ -29,43 +27,27 @@ public class DiamondTest {
                     + "    *";
 
     @Test
-    public void shouldPrintOneStartDiamondCorrectly() {
-        try {
-            StringStream actualPrintStream = new StringStream();
-            Diamond.drawDiamond(1, actualPrintStream);
-
-            String actualResult = actualPrintStream.getPrintString().trim();
-            Assert.assertEquals("Test failed with parameter: maxSize = " + 1,
-                    ONE_STAR,
-                    actualResult);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            Assert.fail();
-        }
+    public void shouldPrintOneStarDiamondCorrectly() {
+        StringStream actualPrintStream = new StringStream();
+        Diamond.drawDiamond(1, actualPrintStream);
+        String actualResult = actualPrintStream.getPrintString().trim();
+        Assert.assertEquals("Test failed with parameter: maxSize = " + 1,
+                ONE_STAR,
+                actualResult);
     }
 
     @Test
     public void shouldPrintEvenStarDiamondCorrectly() {
-        try {
-            StringStream actualPrintStream = new StringStream();
-            Diamond.drawDiamond(4, actualPrintStream);
-            trimStar(actualPrintStream, EVEN_NUMBER_OF_STAR, 4);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            Assert.fail();
-        }
+        StringStream actualPrintStream = new StringStream();
+        Diamond.drawDiamond(4, actualPrintStream);
+        trimStar(actualPrintStream, EVEN_NUMBER_OF_STAR, 4);
     }
 
     @Test
-    public void shouldPrintOddStartDiamondCorrectly() {
-        try {
-            StringStream actualPrintStream = new StringStream();
-            Diamond.drawDiamond(5, actualPrintStream);
-            trimStar(actualPrintStream, ODD_NUMBER_OF_STAR, 5);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            Assert.fail();
-        }
+    public void shouldPrintOddStarDiamondCorrectly() {
+        StringStream actualPrintStream = new StringStream();
+        Diamond.drawDiamond(5, actualPrintStream);
+        trimStar(actualPrintStream, ODD_NUMBER_OF_STAR, 5);
     }
 
     private void trimStar(StringStream actualPrintStream, String expected, int maxSize) {
@@ -79,6 +61,5 @@ public class DiamondTest {
                         actualResult[i]);
             }
         }
-
     }
 }

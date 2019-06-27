@@ -1,14 +1,13 @@
 package core.basesyntax;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 public class StringStream extends PrintStream {
     private String printString = "";
 
-    public StringStream() throws FileNotFoundException {
-        super(new FileOutputStream("file"));
+    public StringStream() {
+        super(new ByteArrayOutputStream());
     }
 
     @Override
