@@ -31,7 +31,6 @@ public class Diamond {
             } else {
                 i--;
             }
-
         }
     }
 
