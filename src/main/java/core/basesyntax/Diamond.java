@@ -13,21 +13,21 @@ public class Diamond {
      * или stream.println()
      */
     public static void drawDiamond(int maxSize, PrintStream stream) {
-      if (n % 2 == 0 || n < 0) {
+      if (maxSize % 2 == 0 || maxSize < 0) {
       stream.print(null);
     }
-    String[] asterisks = new String[n/2 + 1];
-    asterisks[0] = "*\n";
+    String[] asterisks = new String[maxSize/2 + 1];
+    asterisks[0] = "*\maxSize";
     for(int i = 1; i < asterisks.length; i ++) {
       asterisks[i] = "**" + asterisks[i - 1];
     }
-    String[] spaces = new String[n/2 + 1];
+    String[] spaces = new String[maxSize/2 + 1];
     spaces[0] = "";
     for(int i = 1; i < spaces.length; i ++) {
       spaces[i] = " " + spaces[i - 1];
     }
     String diamond = "";
-    for (int i = 0; i < n/2 + 1; i ++) {
+    for (int i = 0; i < maxSize/2 + 1; i ++) {
       diamond += spaces[spaces.length - i - 1] + asterisks[i];
     }
     for (int i = 1; i < n/2 + 1; i ++) {
