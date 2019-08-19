@@ -14,7 +14,7 @@ public class Diamond {
      */
     public static void drawDiamond(int maxSize, PrintStream stream) {
       if (n % 2 == 0 || n < 0) {
-      stream.println(null);
+      stream.print(null);
     }
     String[] asterisks = new String[n/2 + 1];
     asterisks[0] = "*\n";
@@ -33,7 +33,7 @@ public class Diamond {
     for (int i = 1; i < n/2 + 1; i ++) {
       diamond += spaces[i] + asterisks[asterisks.length - i - 1];
     }
-    stream.println(diamond);
+    stream.print(diamond);
     }
 
     public static void main(String[] args) {
