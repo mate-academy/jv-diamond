@@ -14,24 +14,25 @@ public class Diamond {
      */
     public static void drawDiamond(int n, PrintStream stream) {
 
-    	if( n < 1 || n%2 == 0 ) throw new IllegalArgumentException("maxSize must be odd positive number");
-        StringBuilder all = new StringBuilder(n*n);
-        StringBuilder temp = new StringBuilder(n);
-        int offset = 0; int j = ( n + 1 ) / 2;
+
+        StringBuilder all = new StringBuilder(2*n*2*n);
+        StringBuilder temp = new StringBuilder(2*n);
+        int offset = 0; int j = n - 1;
         
-        for(int i = j  -  1; i > 0; i--, j++ ){
+        for(int i = j; i > 0; i--){
             temp.append(" ".repeat(i));
-            temp.append("*".repeat(j - i));
-            temp.append("\n");
+            temp.append("* ".repeat(j - i));
+            temp.append("*\n");
             all.insert(offset,temp);
             offset+=temp.length();
+            if(j - i == 0) temp.deleteCharAt(temp.length() - 1);
             all.insert(offset,temp);
             temp.setLength(0);
         }
         
-        temp.append("*".repeat(n));
-        temp.append("\n");
-        st.insert(offset,temp);
+        temp.append("* ".repeat(n -1 ));
+        temp.append("*\n");
+        all.insert(offset,temp);
         stream.print(all.toString());
 
     }
