@@ -13,6 +13,26 @@ public class Diamond {
      * или stream.println()
      */
     public static void drawDiamond(int maxSize, PrintStream stream) {
+        int i = 1;
+        boolean check = true;
+        while (i > 0){
+            for (int j = 0; j<maxSize - i + 1; j++) {
+                stream.print(" ");
+            }
+            for (int j = 0; j < i; j++){
+                if ((j % 2) == 0) {
+                    stream.print("*");
+                } else {
+                    stream.print(" ");
+                }
+            }
+            if (check) {
+                i++;
+            } else {
+                i--;
+            }
+
+        }
     }
 
     public static void main(String[] args) {
