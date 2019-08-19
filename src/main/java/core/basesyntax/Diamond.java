@@ -24,12 +24,12 @@ public class Diamond {
         String diamond = "";
         for (int i = 0; i < maxSize; i++) {
             diamond += spaces[spaces.length - i - 1] + asterisks[i] + "\n";
-            }
+        }
         for (int i = 1; i < maxSize; i++) {
             diamond += spaces[i] + asterisks[asterisks.length - i - 1] + "\n";
-            }
-        stream.print(diamond);
         }
+        stream.print(diamond);
+    }
 
     public static void main(String[] args) {
         drawDiamond(5, System.out);
