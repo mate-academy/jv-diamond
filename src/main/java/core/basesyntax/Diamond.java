@@ -31,6 +31,7 @@ public class Diamond {
             } else {
                 i--;
             }
+            stream.println();
         }
     }
 
