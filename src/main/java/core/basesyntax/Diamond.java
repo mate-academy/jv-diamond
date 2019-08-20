@@ -32,7 +32,9 @@ public class Diamond {
                 } else {
                     i--;
                 }
-                if (i == maxSize) check = false;
+                if (i == maxSize) {
+                    check = false;
+                }
                 if (!(!check && i == 0)) {
                     stream.println();
                 }
