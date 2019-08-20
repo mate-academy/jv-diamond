@@ -41,6 +41,6 @@ public class Diamond {
     }
 
     public static void main(String[] args) {
-        drawDiamond(4, System.out);
+        drawDiamond(5, System.out);
     }
 }
