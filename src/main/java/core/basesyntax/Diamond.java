@@ -13,7 +13,7 @@ public class Diamond {
     public static void drawDiamond(int maxSize, PrintStream stream) {
         for (int i = 0; i < maxSize; i++) {
             for (int empty = maxSize; empty > i; empty--) {
-                stream.print(" ");
+                stream.print("");
             }
             for (int dot = 0; dot <= i; dot++) {
                 stream.print("*");
@@ -22,13 +22,13 @@ public class Diamond {
                 stream.print("*");
             }
             for (int empty = maxSize; empty > i; empty--) {
-                stream.print(" ");
+                stream.print("");
             }
             stream.println("");
         }
         for (int i = maxSize; i >= 0; i--) {
             for (int empty = maxSize; empty > i; empty--) {
-                stream.print(" ");
+                stream.print("");
             }
             for (int dot = 0; dot <= i; dot++) {
                 stream.print("*");
@@ -37,7 +37,7 @@ public class Diamond {
                 stream.print("*");
             }
             for (int empty = maxSize; empty > i; empty--) {
-                stream.print(" ");
+                stream.print("");
             }
             stream.println("");
         }
