@@ -10,36 +10,31 @@ public class Diamond {
      * Вместо System.out.print() или System.out.println() использовать stream.print()
      * или stream.println()
      */
-    public static void drawDiamond(int maxSize, PrintStream stream) {
-        for (int i = 0; i < maxSize; i++) {
-            for (int empty = maxSize; empty > i; empty--) {
+    public static void drawDiamond(int sizeS, PrintStream stream) {
+        int emptyDots = sizeS - 1;
+        for (int i = 0; i < sizeS; i++) {
+            for (int j = 0; j < emptyDots; j++) {
                 stream.print(" ");
             }
-            for (int dot = 0; dot <= i; dot++) {
+
+            for (int j = 0; j <= i; j++) {
                 stream.print("* ");
             }
-            for (int dot = 0; dot < i; dot++) {
-                stream.print("* ");
-            }
-            for (int empty = maxSize; empty > i; empty--) {
-                stream.print(" ");
-            }
-            stream.println("");
+            stream.println();
+            emptyDots--;
         }
-        for (int i = maxSize; i >= 0; i--) {
-            for (int empty = maxSize; empty > i; empty--) {
+        emptyDots = 0;
+        for (int i = sizeS - 1; i > 0; i--) {
+            for (int j = 0; j <= emptyDots; j++) {
                 stream.print(" ");
             }
-            for (int dot = 0; dot <= i; dot++) {
-                stream.print("*");
-            }
-            for (int dot = 0; dot < i; dot++) {
+
+            for (int j = 0; j < i; j++) {
                 stream.print("* ");
             }
-            for (int empty = maxSize; empty > i; empty--) {
-                stream.print(" ");
-            }
-            stream.println("");
+
+            stream.println();
+            emptyDots++;
         }
     }
 
