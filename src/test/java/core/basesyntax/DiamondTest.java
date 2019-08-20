@@ -54,7 +54,7 @@ public class DiamondTest {
         String[] actualResult = actualPrintStream.getPrintString().split("\n");
         String[] expectedResult = expected.split("\n");
         for (int i = 0; i < actualResult.length; i++) {
-            if (!actualResult[i].isEmpty()) {
+            if (!actualResult[i].isBlank()) {
                 actualResult[i] = actualResult[i].replaceAll("\\s+$", "");
                 Assert.assertEquals("Test failed with parameter: maxSize = " + maxSize,
                         expectedResult[i],
