@@ -11,16 +11,16 @@ public class Diamond {
      * или stream.println()
      */
     public static void drawDiamond(int maxSize, PrintStream stream) {
-        int i = 1;
+        int indexOfPrintingLine = 1;
         boolean check = true;
         if (maxSize == 1) {
             stream.print("*");
         } else {
-            while (i > 0) {
-                for (int j = 1; j < maxSize - i + 1; j++) {
+            while (indexOfPrintingLine > 0) {
+                for (int j = 1; j < maxSize - indexOfPrintingLine + 1; j++) {
                     stream.print(" ");
                 }
-                for (int j = 0; j < i * 2; j++) {
+                for (int j = 0; j < indexOfPrintingLine * 2; j++) {
                     if ((j % 2) == 0) {
                         stream.print("*");
                     } else {
@@ -28,14 +28,14 @@ public class Diamond {
                     }
                 }
                 if (check) {
-                    i++;
+                    indexOfPrintingLine++;
                 } else {
-                    i--;
+                    indexOfPrintingLine--;
                 }
-                if (i == maxSize) {
+                if (indexOfPrintingLine == maxSize) {
                     check = false;
                 }
-                if (!(!check && i == 0)) {
+                if (!(!check && indexOfPrintingLine == 0)) {
                     stream.println();
                 }
             }
