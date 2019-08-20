@@ -16,7 +16,7 @@ public class Diamond {
             for (int y = 0; y < maxSize - i; y++) {
                 stream.print(" ");
             }
-            for (int j = 0; j <= i; j++) {
+            for (int j = 0; j < i; j++) {
                 stream.print("* ");
             }
             stream.println();
@@ -25,7 +25,7 @@ public class Diamond {
             for (int y = 0; y < maxSize - i; y++) {
                 stream.print(" ");
             }
-            for (int j = 0; j <= i; j++) {
+            for (int j = 0; j < i; j++) {
                 stream.print("* ");
             }
             stream.println();
@@ -33,7 +33,7 @@ public class Diamond {
     }
 
     public static void main(String[] args) {
-        drawDiamond(5, System.out);
+        drawDiamond(10, System.out);
     }
 
 }
