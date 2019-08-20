@@ -10,32 +10,28 @@ public class Diamond {
      * Вместо System.out.print() или System.out.println() использовать stream.print()
      * или stream.println()
      */
-    public static void drawDiamond(int n, PrintStream stream) {
-
-
-        StringBuilder all = new StringBuilder(2 * n * 2 * n);
-        StringBuilder temp = new StringBuilder(2 * n);
+    public static void drawDiamond(int maxSize, PrintStream stream) {
+        StringBuilder diamond = new StringBuilder(2 * maxSize * 2 * maxSize);
+        StringBuilder line = new StringBuilder(2 * maxSize);
         int offset = 0;
-        int j = n - 1;
-
+        int j = maxSize - 1;
         for (int i = j; i > 0; i--) {
-            temp.append(" ".repeat(i));
-            temp.append("* ".repeat(j - i));
-            temp.append("*\n");
-            all.insert(offset, temp);
-            offset += temp.length();
+            line.append(" ".repeat(i));
+            line.append("* ".repeat(j - i));
+            line.append("*\n");
+            diamond.insert(offset, line);
+            offset += line.length();
             if (j - i == 0) {
-                temp.deleteCharAt(temp.length() - 1);
+                line.deleteCharAt(line.length() - 1);
             }
-            all.insert(offset, temp);
-            temp.setLength(0);
+            diamond.insert(offset, line);
+            line.setLength(0);
         }
 
-        temp.append("* ".repeat(n - 1));
-        temp.append("*\n");
-        all.insert(offset, temp);
-        stream.print(all.toString());
-
+        line.append("* ".repeat(maxSize - 1));
+        line.append("*\n");
+        diamond.insert(offset, line);
+        stream.print(diamond.toString());
     }
 
     public static void main(String[] args) {
