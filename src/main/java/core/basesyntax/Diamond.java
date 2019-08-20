@@ -34,7 +34,6 @@ public class Diamond {
                 stream.print("\n");
             }
         }
-
     }
 
     public static void main(String[] args) {
