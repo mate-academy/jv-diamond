@@ -16,10 +16,10 @@ public class Diamond {
                 stream.print(" ");
             }
             for (int dot = 0; dot <= i; dot++) {
-                stream.print("+");
+                stream.print("*");
             }
             for (int dot = 0; dot < i; dot++) {
-                stream.print("+");
+                stream.print("*");
             }
             for (int empty = maxSize; empty > i; empty--) {
                 stream.print(" ");
@@ -31,10 +31,10 @@ public class Diamond {
                 stream.print(" ");
             }
             for (int dot = 0; dot <= i; dot++) {
-                stream.print("+");
+                stream.print("*");
             }
             for (int dot = 0; dot < i; dot++) {
-                stream.print("+");
+                stream.print("*");
             }
             for (int empty = maxSize; empty > i; empty--) {
                 stream.print(" ");
