@@ -12,7 +12,7 @@ public class Diamond {
      * Вместо System.out.print() или System.out.println() использовать stream.print()
      * или stream.println()
      */
-    public static void drawDiamond(int maxSize, PrintStream stream) {
+    public static void drawDiamond(int n, PrintStream stream) {
 
 
         StringBuilder all = new StringBuilder(2 * n * 2 * n);
