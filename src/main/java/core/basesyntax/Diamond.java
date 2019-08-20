@@ -11,15 +11,15 @@ public class Diamond {
      * или stream.println()
      */
     public static void drawDiamond(int maxSize, PrintStream stream) {
-        String str = "";
+        String stringLine = "";
 
-        for (int i = 1; i < maxSize; i += 1) {
-            str += " ".repeat(maxSize - i) + "* ".repeat(i) + "\n";
+        for (int i = 1; i < maxSize; i++) {
+            stringLine += " ".repeat(maxSize - i) + "* ".repeat(i) + "\n";
         }
-        for (int i = maxSize; i >= 1; i -= 1) {
-            str += " ".repeat(maxSize - i) + "* ".repeat(i) + "\n";
+        for (int i = maxSize; i >= 1; i--) {
+            stringLine += " ".repeat(maxSize - i) + "* ".repeat(i) + "\n";
         }
-        stream.print(str);
+        stream.print(stringLine);
     }
 
     public static void main(String[] args) {
