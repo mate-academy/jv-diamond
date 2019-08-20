@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.io.PrintStream;
 
 public class Diamond {
-    public static void drawDiamond(int maxSize, PrintStream stream) {
+    protected static void drawDiamond(int maxSize, PrintStream stream) {
         for (int i = 0; i < maxSize; i++) {
             for (int j = maxSize - 2; j >= i; j--) {
                 stream.print(" ");
