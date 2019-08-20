@@ -6,16 +6,16 @@ public class Diamond {
 
     /**
      * Нарисовать ромб со звёздочек заданной величины.
-     *
+     * <p>
      * Пример: величина 3, значит максимальное кол-во звёзд в ряду (по диагонали) будет 3.
-     *
+     * <p>
      * Вместо System.out.print() или System.out.println() использовать stream.print()
      * или stream.println()
      */
     public static void drawDiamond(int maxSize, PrintStream stream) {
         int i = 1;
         boolean check = true;
-        if (maxSize == 1 ) {
+        if (maxSize == 1) {
             stream.print("*");
         } else {
             while (i > 0) {
