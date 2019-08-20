@@ -15,27 +15,34 @@ public class Diamond {
     public static void drawDiamond(int maxSize, PrintStream stream) {
         int i = 1;
         boolean check = true;
-        while (i > 0){
-            for (int j = 0; j<maxSize - i + 1; j++) {
-                stream.print(" ");
-            }
-            for (int j = 0; j < i; j++){
-                if ((j % 2) == 0) {
-                    stream.print("*");
-                } else {
+        if (maxSize == 1 ) {
+            stream.print("*");
+        } else {
+            while (i > 0) {
+                for (int j = 1; j < maxSize - i + 1; j++) {
                     stream.print(" ");
                 }
+                for (int j = 0; j < i * 2; j++) {
+                    if ((j % 2) == 0) {
+                        stream.print("*");
+                    } else {
+                        stream.print(" ");
+                    }
+                }
+                if (check) {
+                    i++;
+                } else {
+                    i--;
+                }
+                if (i == maxSize) check = false;
+                if (!(!check && i == 0)) {
+                    stream.println();
+                }
             }
-            if (check) {
-                i++;
-            } else {
-                i--;
-            }
-            stream.println();
         }
     }
 
     public static void main(String[] args) {
-        drawDiamond(5, System.out);
+        drawDiamond(4, System.out);
     }
 }
