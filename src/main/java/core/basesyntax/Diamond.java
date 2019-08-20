@@ -16,8 +16,7 @@ public class Diamond {
                 stream.print(" ");
             }
             for (int k = 0; k < i - 1; k++) {
-                stream.print("*");
-                stream.print(" ");
+                stream.print("* ");
             }
             stream.println("*");
         }
@@ -26,11 +25,9 @@ public class Diamond {
                 stream.print(" ");
             }
             for (int k = 0; k < i - 1; k++) {
-                stream.print("*");
-                stream.print(" ");
+                stream.print("* ");
             }
             stream.println("*");
-
         }
     }
 
